@@ -1,20 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
-    <h1 class="mb-4">Bem-vindo ao Sistema de Análise Genética</h1>
-    <p>
-        Este sistema foi desenvolvido para facilitar o registro e a gestão de exames genéticos realizados em nosso laboratório.<br>
-        Com ele, você pode:
-    </p>
-    <ul>
-        <li>Cadastrar novos exames genéticos de pacientes</li>
-        <li>Visualizar exames já cadastrados</li>
-        <li>Manter o histórico de laudos de forma digital e acessível</li>
-    </ul>
-    <div class="mt-4">
-        <a href="{{ route('exames.create') }}" class="btn btn-primary">Cadastrar novo exame</a>
-        <a href="{{ route('exames.index') }}" class="btn btn-secondary">Ver exames cadastrados</a>
+<div class="container fade-in">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-5 mt-4 text-center">
+                <img src="https://img.icons8.com/color/100/000000/dna-helix.png" alt="DNA" style="width:90px; margin-bottom:20px; animation: fadeIn 2s;">
+                <h1 class="mb-3" style="color:#1976d2; font-weight:700;">Bem-vindo ao LabGenética</h1>
+                <p class="lead mb-4" style="color:#333;">
+                    Sistema para registro e gestão de exames genéticos.<br>
+                    <span style="color:#26a69a;">Organize, consulte e mantenha o histórico dos exames do laboratório de forma prática e segura.</span>
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mt-3">
+                    <a href="{{ route('exames.create') }}" class="btn btn-primary btn-lg shadow-sm" style="animation: fadeInUp 1.5s;">Cadastrar novo exame</a>
+                    <a href="{{ route('exames.index') }}" class="btn btn-secondary btn-lg shadow-sm" style="animation: fadeInUp 1.7s;">Ver exames cadastrados</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
